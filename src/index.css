@@ -1,49 +1,127 @@
+/* RESET */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* BACKGROUND */
 body {
-  margin: 0;
-  background: #f4f6f8;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
+/* APP CARD */
 .app {
-  background: white;
-  width: 350px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  background: #ffffff;
+  width: 380px;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
+/* TITLE */
+.app h1 {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  color: #333;
 }
 
-input {
+/* INPUTS */
+.app input[type="text"],
+.app input[type="date"] {
   width: 100%;
-  padding: 8px;
+  padding: 10px 12px;
   margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
 }
 
-button {
-  padding: 6px 10px;
-  margin: 5px 3px;
+.app input:focus {
+  border-color: #667eea;
+}
+
+/* ADD BUTTON */
+.app button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin: 4px 2px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.app button:hover {
+  background: #5a67d8;
 }
 
-li {
+/* FILTER BUTTONS */
+.filters {
   display: flex;
   justify-content: space-between;
+  margin: 12px 0;
+}
+
+.filters button {
+  flex: 1;
+  margin: 0 4px;
+  background: #edf2f7;
+  color: #333;
+}
+
+.filters button:hover {
+  background: #e2e8f0;
+}
+
+/* TASK LIST */
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+/* TASK ITEM */
+li {
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 10px;
   margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TASK TEXT */
+.task-text {
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* OVERDUE */
+.task-text.overdue {
+  color: #e53e3e;
+  font-weight: 600;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: #e53e3e;
+}
+
+.delete-btn:hover {
+  background: #c53030;
 }
